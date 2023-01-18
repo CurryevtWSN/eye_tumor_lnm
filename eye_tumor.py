@@ -49,10 +49,10 @@ Chemotherapy = map[Chemotherapy]
 T = map[T]
 # 数据读取，特征标注
 #%%load model
-mlp_model = joblib.load(r'E:\大五寒假相关文件\结膜黑色素瘤\mlP_tumor_eye_model.pkl')
+mlp_model = joblib.load('mlP_tumor_eye_model.pkl')
 
 #%%load data
-hp_train = pd.read_csv(r'E:\大五寒假相关文件\结膜黑色素瘤\tuomor_data.csv')
+hp_train = pd.read_csv('tuomor_data.csv')
 features =["Primary_Site","Marital_status","Laterality","Tumor_size","Radiation",'Chemotherapy',"T"]
 target = 'N'
 y = np.array(hp_train[target])
